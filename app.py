@@ -12,4 +12,4 @@ def generate_image(prompt):
     return image
 
 iface = gr.Interface(generate_image, gr.inputs.Textbox(label="Enter a prompt"), gr.outputs.Image())
-iface.launch()
+iface.launch() 
