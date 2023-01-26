@@ -12,5 +12,6 @@ def generate_image(prompt):
     image = np.asarray(image)
     return image
 
-iface = gr.Interface(generate_image, gr.inputs.Textbox(label="Enter a prompt"), gr.outputs.Image(type='numpy'))
+iface = gr.Interface(generate_image, gr.inputs.Textbox(label="Enter a prompt"), gr.outputs.Image(type='numpy'), batch_size=1)
+
 iface.launch()
