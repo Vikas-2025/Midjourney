@@ -5,6 +5,7 @@ import numpy as np
 
 model_id = "prompthero/openjourney"
 pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float32)
+pipe = pipe.to("cpu")
 
 
 def generate_image(prompt):
